@@ -8,7 +8,7 @@ import createStore from './helpers/createStore';
 
 const app = express();
 
-// Sort of change on developer bramch
+// Sort of change on developer branch
 
 app.use(
   '/api',
