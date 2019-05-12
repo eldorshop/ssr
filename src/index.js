@@ -1,3 +1,5 @@
+// change 12-1
+
 import 'babel-polyfill';
 import express from 'express';
 import { matchRoutes } from 'react-router-config';
@@ -8,9 +10,6 @@ import createStore from './helpers/createStore';
 
 const app = express();
 
-// Sort of change on developer branch
-// Sort of change on developer branch origin 1
-// Sort of change on developer branch origin others 2
 app.use(
   '/api',
   proxy('http://react-ssr-api.herokuapp.com', {
