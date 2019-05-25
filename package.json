@@ -4,8 +4,8 @@
   "description": "Server side rendering project",
   "main": "index.js",
   "engines": {
-    "node": "10.x",
-    "npm": "5.0.3"
+    "node": "12.1.0",
+    "npm": "6.9.0"
   },
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
