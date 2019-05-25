@@ -7,6 +7,10 @@ import Routes from './client/Routes';
 import renderer from './helpers/renderer';
 import createStore from './helpers/createStore';
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
 const app = express();
 
@@ -50,6 +54,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Listening on prot 3000');
+app.listen(port, () => {
+  console.log('Listening on prot ' + port);
 });
