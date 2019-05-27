@@ -2280,7 +2280,7 @@ var fetchUsers = exports.fetchUsers = function fetchUsers() {
             case 0:
               _context.next = 2;
               return new Promise(function (resolve) {
-                return setTimeout(resolve, 1000);
+                return setTimeout(resolve, 100);
               });
 
             case 2:

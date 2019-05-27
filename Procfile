@@ -1,1 +1,1 @@
-web: nodemon ./build/bundle.js --watch build
+web: npm-run-all --parallel dev:*

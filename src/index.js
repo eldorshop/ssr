@@ -7,10 +7,7 @@ import Routes from './client/Routes';
 import renderer from './helpers/renderer';
 import createStore from './helpers/createStore';
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
+const PORT = process.env.PORT || 5000
 
 const app = express();
 
@@ -18,7 +15,7 @@ app.use(
   '/api',
   proxy('http://react-ssr-api.herokuapp.com', {
     proxyReqOptDecorator(opts) {
-      opts.headers['x-forwarded-host'] = 'localhost:3000';
+      opts.headers['x-forwarded-host'] = '127.0.0.1:' + PORT;
       return opts;
     }
   })
@@ -54,6 +51,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log('Listening on prot ' + port);
+app.listen(PORT, () => {
+  console.log('Listening on prot ' + PORT);
 });
