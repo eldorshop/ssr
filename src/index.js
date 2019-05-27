@@ -15,7 +15,7 @@ app.use(
   '/api',
   proxy('http://react-ssr-api.herokuapp.com', {
     proxyReqOptDecorator(opts) {
-      opts.headers['x-forwarded-host'] = '127.0.0.1:' + PORT;
+      opts.headers['x-forwarded-host'] = 'https://afternoon-wave-34569.herokuapp.com:' + PORT;
       return opts;
     }
   })
