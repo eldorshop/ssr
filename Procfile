@@ -1,1 +1,1 @@
-web: NODE_ENV=production nodemon ./build/bundle.js
+web: node ./build/bundle.js
