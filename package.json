@@ -5,7 +5,7 @@
   "main": "index.js",
   "engines": {
     "node": "12.1.0",
-    "npm": "6.9.0"
+    "yarn": "1.15.2"
   },
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
