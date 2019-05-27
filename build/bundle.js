@@ -307,13 +307,13 @@ var _createStore2 = _interopRequireDefault(_createStore);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PORT = process.env.PORT || 5000;
+var PORT = process.env.PORT || 3000;
 
 var app = (0, _express2.default)();
 
 app.use('/api', (0, _expressHttpProxy2.default)('http://react-ssr-api.herokuapp.com', {
   proxyReqOptDecorator: function proxyReqOptDecorator(opts) {
-    opts.headers['x-forwarded-host'] = '127.0.0.1:' + PORT;
+    opts.headers['x-forwarded-host'] = 'localhost:3000';
     return opts;
   }
 }));
