@@ -1,1 +1,1 @@
-web: nodemon ./build/bundle.js
+web: nodemon --watch build --exec "node ./build/bundle.js"
